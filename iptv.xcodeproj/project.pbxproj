@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ED89EB8E5FB01CED10C0CB1 /* Pods_iptv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E7E74D8921D303E1BF45F3 /* Pods_iptv.framework */; };
 		AC090FD220CB072D0092FD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC090FD120CB072C0092FD14 /* AppDelegate.swift */; };
-		AC090FD420CB072D0092FD14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC090FD320CB072D0092FD14 /* ViewController.swift */; };
+		AC090FD420CB072D0092FD14 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC090FD320CB072D0092FD14 /* ConnectionViewController.swift */; };
 		AC090FD720CB072D0092FD14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC090FD520CB072D0092FD14 /* Main.storyboard */; };
 		AC090FD920CB072E0092FD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC090FD820CB072E0092FD14 /* Assets.xcassets */; };
+		AC4579C520CB13AC0029819D /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579C420CB13AC0029819D /* ChannelsViewController.swift */; };
+		AC4579CA20CB1B1B0029819D /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579C920CB1B1B0029819D /* Playlist.swift */; };
+		AC4579CC20CB1B240029819D /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579CB20CB1B240029819D /* Channel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		425419F4E93E7F56D56A432C /* Pods-iptv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iptv.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iptv/Pods-iptv.debug.xcconfig"; sourceTree = "<group>"; };
+		70E7E74D8921D303E1BF45F3 /* Pods_iptv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iptv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC090FCE20CB072C0092FD14 /* iptv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iptv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC090FD120CB072C0092FD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC090FD320CB072D0092FD14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC090FD320CB072D0092FD14 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		AC090FD620CB072D0092FD14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC090FD820CB072E0092FD14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC090FDA20CB072E0092FD14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC4579C420CB13AC0029819D /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
+		AC4579C920CB1B1B0029819D /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
+		AC4579CB20CB1B240029819D /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		D397FFEAB0CBFDB088E405F5 /* Pods-iptv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iptv.release.xcconfig"; path = "Pods/Target Support Files/Pods-iptv/Pods-iptv.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED89EB8E5FB01CED10C0CB1 /* Pods_iptv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B87034FDBD7AA096302F54B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70E7E74D8921D303E1BF45F3 /* Pods_iptv.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC090FC520CB072C0092FD14 = {
 			isa = PBXGroup;
 			children = (
 				AC090FD020CB072C0092FD14 /* iptv */,
 				AC090FCF20CB072C0092FD14 /* Products */,
+				F664CC231E096D5D7EA23596 /* Pods */,
+				4B87034FDBD7AA096302F54B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,11 +79,30 @@
 			path = iptv;
 			sourceTree = "<group>";
 		};
+		AC4579C620CB1A960029819D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC4579C920CB1B1B0029819D /* Playlist.swift */,
+				AC4579CB20CB1B240029819D /* Channel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AC4579C720CB1A9D0029819D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC090FD320CB072D0092FD14 /* ConnectionViewController.swift */,
+				AC4579C420CB13AC0029819D /* ChannelsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		AC669E1320CB082500C827F9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				AC090FD120CB072C0092FD14 /* AppDelegate.swift */,
-				AC090FD320CB072D0092FD14 /* ViewController.swift */,
+				AC4579C720CB1A9D0029819D /* Controller */,
+				AC4579C620CB1A960029819D /* Model */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -77,6 +117,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F664CC231E096D5D7EA23596 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				425419F4E93E7F56D56A432C /* Pods-iptv.debug.xcconfig */,
+				D397FFEAB0CBFDB088E405F5 /* Pods-iptv.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -84,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC090FDD20CB072E0092FD14 /* Build configuration list for PBXNativeTarget "iptv" */;
 			buildPhases = (
+				1C5B4E14A19F25F3A173FF7E /* [CP] Check Pods Manifest.lock */,
 				AC090FCA20CB072C0092FD14 /* Sources */,
 				AC090FCB20CB072C0092FD14 /* Frameworks */,
 				AC090FCC20CB072C0092FD14 /* Resources */,
+				73E6B62C239FAE8CE5ECACF1 /* [CP] Embed Pods Frameworks */,
+				15BAEDC4D3F3A73C33030482 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,13 +194,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15BAEDC4D3F3A73C33030482 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iptv/Pods-iptv-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1C5B4E14A19F25F3A173FF7E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iptv-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E6B62C239FAE8CE5ECACF1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iptv/Pods-iptv-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iptv/Pods-iptv-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC090FCA20CB072C0092FD14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC090FD420CB072D0092FD14 /* ViewController.swift in Sources */,
+				AC4579C520CB13AC0029819D /* ChannelsViewController.swift in Sources */,
+				AC4579CC20CB1B240029819D /* Channel.swift in Sources */,
+				AC090FD420CB072D0092FD14 /* ConnectionViewController.swift in Sources */,
 				AC090FD220CB072D0092FD14 /* AppDelegate.swift in Sources */,
+				AC4579CA20CB1B1B0029819D /* Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +389,7 @@
 		};
 		AC090FDE20CB072E0092FD14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 425419F4E93E7F56D56A432C /* Pods-iptv.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -299,6 +409,7 @@
 		};
 		AC090FDF20CB072E0092FD14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D397FFEAB0CBFDB088E405F5 /* Pods-iptv.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

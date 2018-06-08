@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Connection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iptv" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ConnectionViewController" customModule="iptv" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,12 +21,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICF-Lc-duB" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="835" y="415" width="250" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="K2Q-dy-ycJ"/>
+                                    <constraint firstAttribute="height" constant="250" id="pNH-9Q-fWq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ICF-Lc-duB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CJy-K4-ClW"/>
+                            <constraint firstItem="ICF-Lc-duB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aA7-3J-wDF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
+                    <connections>
+                        <outlet property="activityView" destination="ICF-Lc-duB" id="Uia-IH-n3B"/>
+                        <segue destination="JsI-dF-bjy" kind="presentation" identifier="channels" modalTransitionStyle="crossDissolve" id="ykf-4b-Csy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="168" y="69"/>
+        </scene>
+        <!--Channels View Controller-->
+        <scene sceneID="zxE-FB-cHE">
+            <objects>
+                <collectionViewController modalTransitionStyle="crossDissolve" id="JsI-dF-bjy" customClass="ChannelsViewController" customModule="iptv" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="56A-5g-dhZ">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UgQ-L3-NpU">
+                            <size key="itemSize" width="350" height="250"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="40" minY="0.0" maxX="40" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="channel" id="mg4-I9-Nb4" customClass="ChannelCollectionCell" customModule="iptv" customModuleProvider="target">
+                                <rect key="frame" x="40" y="0.0" width="350" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-Tb-AzR">
+                                            <rect key="frame" x="129" y="102" width="93" height="46"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="cd6-Tb-AzR" firstAttribute="centerY" secondItem="mg4-I9-Nb4" secondAttribute="centerY" id="3ja-1p-MpE"/>
+                                    <constraint firstItem="cd6-Tb-AzR" firstAttribute="centerX" secondItem="mg4-I9-Nb4" secondAttribute="centerX" id="nLw-h0-MH1"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="title" destination="cd6-Tb-AzR" id="hZF-si-6yi"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="JsI-dF-bjy" id="Mcs-xL-Jmu"/>
+                            <outlet property="delegate" destination="JsI-dF-bjy" id="YKn-i2-MQC"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <segue destination="PCX-1H-XjP" kind="presentation" identifier="player" id="aXB-DC-JiA"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Me-tg-Cgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2549" y="69"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="9zv-6w-0AY">
+            <objects>
+                <avPlayerViewController modalTransitionStyle="crossDissolve" videoGravity="AVLayerVideoGravityResizeAspect" id="PCX-1H-XjP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpp-7Q-49f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4859" y="69"/>
         </scene>
     </scenes>
 </document>
