@@ -52,13 +52,29 @@
 		AC090FD020CB072C0092FD14 /* iptv */ = {
 			isa = PBXGroup;
 			children = (
+				AC669E1320CB082500C827F9 /* Sources */,
+				AC669E1420CB083000C827F9 /* Resources */,
+			);
+			path = iptv;
+			sourceTree = "<group>";
+		};
+		AC669E1320CB082500C827F9 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
 				AC090FD120CB072C0092FD14 /* AppDelegate.swift */,
 				AC090FD320CB072D0092FD14 /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		AC669E1420CB083000C827F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				AC090FD520CB072D0092FD14 /* Main.storyboard */,
 				AC090FD820CB072E0092FD14 /* Assets.xcassets */,
 				AC090FDA20CB072E0092FD14 /* Info.plist */,
 			);
-			path = iptv;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +285,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K69GWJ45Q;
-				INFOPLIST_FILE = iptv/Info.plist;
+				INFOPLIST_FILE = iptv/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -288,7 +304,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K69GWJ45Q;
-				INFOPLIST_FILE = iptv/Info.plist;
+				INFOPLIST_FILE = iptv/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
