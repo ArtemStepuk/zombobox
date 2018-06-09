@@ -15,9 +15,11 @@ class ConnectionViewController: UIViewController {
         networkService.playlist(from: Config.playlistURL) { result in
             switch result {
             case .value(let rawPlaylist):
-                self.activityIndicator.stopAnimating()
-                self.playlist = rawPlaylist
-                self.performSegue(withIdentifier: SeguesIDs.channels.rawValue, sender: self)
+                DispatchQueue.main.async {
+                    self.activityIndicator.stopAnimating()
+                    self.playlist = rawPlaylist
+                    self.performSegue(withIdentifier: SeguesIDs.channels.rawValue, sender: self)
+                }
             case .error(let error):
                 print(error) //TODO:
             }
