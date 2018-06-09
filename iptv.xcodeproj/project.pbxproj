@@ -9,31 +9,51 @@
 /* Begin PBXBuildFile section */
 		AC090FD220CB072D0092FD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC090FD120CB072C0092FD14 /* AppDelegate.swift */; };
 		AC090FD420CB072D0092FD14 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC090FD320CB072D0092FD14 /* ConnectionViewController.swift */; };
-		AC090FD720CB072D0092FD14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC090FD520CB072D0092FD14 /* Main.storyboard */; };
-		AC090FD920CB072E0092FD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC090FD820CB072E0092FD14 /* Assets.xcassets */; };
+		AC090FD720CB072D0092FD14 /* Main-tvos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC090FD520CB072D0092FD14 /* Main-tvos.storyboard */; };
+		AC090FD920CB072E0092FD14 /* Assets-tvos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC090FD820CB072E0092FD14 /* Assets-tvos.xcassets */; };
 		AC4579C520CB13AC0029819D /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579C420CB13AC0029819D /* ChannelsViewController.swift */; };
 		AC4579CE20CC11700029819D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579CD20CC11700029819D /* Config.swift */; };
 		AC4579D220CC12BD0029819D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579D120CC12BD0029819D /* Services.swift */; };
 		AC4579D720CC135F0029819D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579D620CC135F0029819D /* Utils.swift */; };
 		AC4579DC20CC16C30029819D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579DB20CC16C30029819D /* Models.swift */; };
+		AC4579DF20CC1C760029819D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579D620CC135F0029819D /* Utils.swift */; };
+		AC4579E020CC1C760029819D /* ChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579C420CB13AC0029819D /* ChannelsViewController.swift */; };
+		AC4579E120CC1C760029819D /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC090FD320CB072D0092FD14 /* ConnectionViewController.swift */; };
+		AC4579E220CC1C760029819D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC090FD120CB072C0092FD14 /* AppDelegate.swift */; };
+		AC4579E320CC1C760029819D /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579DB20CC16C30029819D /* Models.swift */; };
+		AC4579E420CC1C760029819D /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579CD20CC11700029819D /* Config.swift */; };
+		AC4579E520CC1C760029819D /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4579D120CC12BD0029819D /* Services.swift */; };
+		AC4579F320CC1D4E0029819D /* Assets-ios.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4579F220CC1D4E0029819D /* Assets-ios.xcassets */; };
+		AC4579F620CC1DAD0029819D /* Main-ios.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4579F420CC1DAD0029819D /* Main-ios.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC090FCE20CB072C0092FD14 /* iptv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iptv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC090FCE20CB072C0092FD14 /* iptv-tvos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iptv-tvos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC090FD120CB072C0092FD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC090FD320CB072D0092FD14 /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
-		AC090FD620CB072D0092FD14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AC090FD820CB072E0092FD14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AC090FDA20CB072E0092FD14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC090FD620CB072D0092FD14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-tvos.storyboard"; sourceTree = "<group>"; };
+		AC090FD820CB072E0092FD14 /* Assets-tvos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets-tvos.xcassets"; sourceTree = "<group>"; };
+		AC090FDA20CB072E0092FD14 /* Info-tvos.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvos.plist"; sourceTree = "<group>"; };
 		AC4579C420CB13AC0029819D /* ChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelsViewController.swift; sourceTree = "<group>"; };
 		AC4579CD20CC11700029819D /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		AC4579D120CC12BD0029819D /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		AC4579D620CC135F0029819D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		AC4579DB20CC16C30029819D /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		AC4579ED20CC1C760029819D /* iptv-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iptv-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4579F220CC1D4E0029819D /* Assets-ios.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Assets-ios.xcassets"; sourceTree = "<group>"; };
+		AC4579F520CC1DAD0029819D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-ios.storyboard"; sourceTree = "<group>"; };
+		AC4579F720CC1F870029819D /* Info-ios.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-ios.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AC090FCB20CB072C0092FD14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC4579E620CC1C760029819D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,7 +74,8 @@
 		AC090FCF20CB072C0092FD14 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC090FCE20CB072C0092FD14 /* iptv.app */,
+				AC090FCE20CB072C0092FD14 /* iptv-tvos.app */,
+				AC4579ED20CC1C760029819D /* iptv-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,9 +146,12 @@
 		AC669E1420CB083000C827F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AC090FD520CB072D0092FD14 /* Main.storyboard */,
-				AC090FD820CB072E0092FD14 /* Assets.xcassets */,
-				AC090FDA20CB072E0092FD14 /* Info.plist */,
+				AC090FDA20CB072E0092FD14 /* Info-tvos.plist */,
+				AC4579F720CC1F870029819D /* Info-ios.plist */,
+				AC090FD520CB072D0092FD14 /* Main-tvos.storyboard */,
+				AC4579F420CC1DAD0029819D /* Main-ios.storyboard */,
+				AC090FD820CB072E0092FD14 /* Assets-tvos.xcassets */,
+				AC4579F220CC1D4E0029819D /* Assets-ios.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -135,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AC090FCD20CB072C0092FD14 /* iptv */ = {
+		AC090FCD20CB072C0092FD14 /* iptv-tvos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AC090FDD20CB072E0092FD14 /* Build configuration list for PBXNativeTarget "iptv" */;
+			buildConfigurationList = AC090FDD20CB072E0092FD14 /* Build configuration list for PBXNativeTarget "iptv-tvos" */;
 			buildPhases = (
 				AC090FCA20CB072C0092FD14 /* Sources */,
 				AC090FCB20CB072C0092FD14 /* Frameworks */,
@@ -147,9 +171,26 @@
 			);
 			dependencies = (
 			);
-			name = iptv;
+			name = "iptv-tvos";
 			productName = iptv;
-			productReference = AC090FCE20CB072C0092FD14 /* iptv.app */;
+			productReference = AC090FCE20CB072C0092FD14 /* iptv-tvos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC4579DD20CC1C760029819D /* iptv-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC4579EA20CC1C760029819D /* Build configuration list for PBXNativeTarget "iptv-ios" */;
+			buildPhases = (
+				AC4579DE20CC1C760029819D /* Sources */,
+				AC4579E620CC1C760029819D /* Frameworks */,
+				AC4579E720CC1C760029819D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iptv-ios";
+			productName = iptv;
+			productReference = AC4579ED20CC1C760029819D /* iptv-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -180,7 +221,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC090FCD20CB072C0092FD14 /* iptv */,
+				AC090FCD20CB072C0092FD14 /* iptv-tvos */,
+				AC4579DD20CC1C760029819D /* iptv-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -190,8 +232,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC090FD920CB072E0092FD14 /* Assets.xcassets in Resources */,
-				AC090FD720CB072D0092FD14 /* Main.storyboard in Resources */,
+				AC090FD920CB072E0092FD14 /* Assets-tvos.xcassets in Resources */,
+				AC090FD720CB072D0092FD14 /* Main-tvos.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC4579E720CC1C760029819D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC4579F320CC1D4E0029819D /* Assets-ios.xcassets in Resources */,
+				AC4579F620CC1DAD0029819D /* Main-ios.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,15 +263,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AC4579DE20CC1C760029819D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC4579DF20CC1C760029819D /* Utils.swift in Sources */,
+				AC4579E020CC1C760029819D /* ChannelsViewController.swift in Sources */,
+				AC4579E120CC1C760029819D /* ConnectionViewController.swift in Sources */,
+				AC4579E220CC1C760029819D /* AppDelegate.swift in Sources */,
+				AC4579E320CC1C760029819D /* Models.swift in Sources */,
+				AC4579E420CC1C760029819D /* Config.swift in Sources */,
+				AC4579E520CC1C760029819D /* Services.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AC090FD520CB072D0092FD14 /* Main.storyboard */ = {
+		AC090FD520CB072D0092FD14 /* Main-tvos.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC090FD620CB072D0092FD14 /* Base */,
 			);
-			name = Main.storyboard;
+			name = "Main-tvos.storyboard";
+			sourceTree = "<group>";
+		};
+		AC4579F420CC1DAD0029819D /* Main-ios.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4579F520CC1DAD0029819D /* Base */,
+			);
+			name = "Main-ios.storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -345,7 +418,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K69GWJ45Q;
-				INFOPLIST_FILE = iptv/Resources/Info.plist;
+				INFOPLIST_FILE = "iptv/Resources/Info-tvos.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -364,7 +437,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4K69GWJ45Q;
-				INFOPLIST_FILE = iptv/Resources/Info.plist;
+				INFOPLIST_FILE = "iptv/Resources/Info-tvos.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +446,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		AC4579EB20CC1C760029819D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K69GWJ45Q;
+				INFOPLIST_FILE = "iptv/Resources/Info-ios.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = art.app.iptv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC4579EC20CC1C760029819D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4K69GWJ45Q;
+				INFOPLIST_FILE = "iptv/Resources/Info-ios.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = art.app.iptv;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -388,11 +501,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC090FDD20CB072E0092FD14 /* Build configuration list for PBXNativeTarget "iptv" */ = {
+		AC090FDD20CB072E0092FD14 /* Build configuration list for PBXNativeTarget "iptv-tvos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC090FDE20CB072E0092FD14 /* Debug */,
 				AC090FDF20CB072E0092FD14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC4579EA20CC1C760029819D /* Build configuration list for PBXNativeTarget "iptv-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC4579EB20CC1C760029819D /* Debug */,
+				AC4579EC20CC1C760029819D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

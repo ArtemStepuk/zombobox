@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BnG-Un-pgy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Connection View Controller-->
+        <scene sceneID="7rH-K4-wOe">
+            <objects>
+                <viewController id="BnG-Un-pgy" customClass="ConnectionViewController" customModule="iptv_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B8O-Sv-VdA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ct9-4O-aBA">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ct9-4O-aBA" firstAttribute="centerY" secondItem="B8O-Sv-VdA" secondAttribute="centerY" id="ifC-7t-eHe"/>
+                            <constraint firstItem="ct9-4O-aBA" firstAttribute="centerX" secondItem="B8O-Sv-VdA" secondAttribute="centerX" id="oQW-p0-e92"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Z36-zT-XTR"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ct9-4O-aBA" id="Qrb-Bf-pci"/>
+                        <segue destination="Czv-4q-sgH" kind="presentation" identifier="channels" id="cFd-KX-y60"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yBD-Pp-oik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31" y="57"/>
+        </scene>
+        <!--Channels View Controller-->
+        <scene sceneID="BQg-Cb-SjV">
+            <objects>
+                <collectionViewController id="Czv-4q-sgH" customClass="ChannelsViewController" customModule="iptv_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ya5-2N-n8y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rze-Dd-BL0">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="channel" id="Tsk-ZF-2jA" customClass="ChannelCollectionCell" customModule="iptv_ios" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUs-SF-5a1">
+                                            <rect key="frame" x="13" y="19.5" width="24" height="11"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="EUs-SF-5a1" firstAttribute="centerY" secondItem="Tsk-ZF-2jA" secondAttribute="centerY" id="IMs-lH-Oth"/>
+                                    <constraint firstItem="EUs-SF-5a1" firstAttribute="centerX" secondItem="Tsk-ZF-2jA" secondAttribute="centerX" id="hj3-ix-3WZ"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="title" destination="EUs-SF-5a1" id="Atw-0t-g7u"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Czv-4q-sgH" id="JZO-E8-Nza"/>
+                            <outlet property="delegate" destination="Czv-4q-sgH" id="uaa-kb-AJ2"/>
+                        </connections>
+                    </collectionView>
+                    <connections>
+                        <segue destination="UJm-dh-qXh" kind="presentation" identifier="player" id="sQb-Jf-Iu0"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmy-J8-Uq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="697" y="56"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="MaL-C4-b1k">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="UJm-dh-qXh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YjP-Cf-CiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1426" y="56"/>
+        </scene>
+    </scenes>
+</document>
