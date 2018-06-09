@@ -4,6 +4,18 @@ import AVKit
 
 class ChannelCollectionCell: UICollectionViewCell {
     @IBOutlet var title: UILabel!
+
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+        if isFocused {
+            layer.borderWidth = 2
+            layer.borderColor = UIColor.blue.cgColor
+            layer.transform = CATransform3DMakeScale(1.15, 1.15, 1);
+        } else {
+            layer.borderWidth = 0
+            layer.borderColor = UIColor.white.cgColor
+            layer.setAffineTransform(.identity)
+        }
+    }
 }
 
 class ChannelsViewController: UICollectionViewController {

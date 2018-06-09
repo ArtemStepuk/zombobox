@@ -68,7 +68,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="250"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-Tb-AzR">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cd6-Tb-AzR">
                                             <rect key="frame" x="129" y="102" width="93" height="46"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                             <nil key="textColor"/>
@@ -78,7 +78,9 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="cd6-Tb-AzR" firstAttribute="centerY" secondItem="mg4-I9-Nb4" secondAttribute="centerY" id="3ja-1p-MpE"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cd6-Tb-AzR" secondAttribute="trailing" id="lki-Gl-1BD"/>
                                     <constraint firstItem="cd6-Tb-AzR" firstAttribute="centerX" secondItem="mg4-I9-Nb4" secondAttribute="centerX" id="nLw-h0-MH1"/>
+                                    <constraint firstItem="cd6-Tb-AzR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mg4-I9-Nb4" secondAttribute="leading" id="y1P-Di-BnP"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="title" destination="cd6-Tb-AzR" id="hZF-si-6yi"/>

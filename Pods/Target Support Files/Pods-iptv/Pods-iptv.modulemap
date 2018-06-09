@@ -1,0 +1,6 @@
+framework module Pods_iptv {
+  umbrella header "Pods-iptv-umbrella.h"
+
+  export *
+  module * { export * }
+}

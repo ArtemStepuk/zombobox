@@ -10,11 +10,15 @@ class ConnectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
         activityView.type = .ballScaleMultiple
         activityView.color = .white
         activityView.startAnimating()
-
+        
         loadChannels { playlist in
             DispatchQueue.main.async {
                 self.playlist = playlist
@@ -22,6 +26,7 @@ class ConnectionViewController: UIViewController {
                 self.performSegue(withIdentifier: "channels", sender: self)
             }
         }
+
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
