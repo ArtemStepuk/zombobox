@@ -1,5 +1,5 @@
 import Foundation
 
 struct Config {
-    static let playlistURL = //TODO: past m3u8 url with streams. 
+    static let playlistURL: URL = //TODO: past m3u8 url with streams.
 }
