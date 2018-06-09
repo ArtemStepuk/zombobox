@@ -1,5 +1,5 @@
 import Foundation
 
 struct Config {
-    static let playlistURL = URL(string: "https://smarttvnews.ru/apps/iptvchannels.m3u")!
+    static let playlistURL = //TODO: past m3u8 url with streams. 
 }
