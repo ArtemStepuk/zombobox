@@ -5,7 +5,8 @@ import AVKit
 class ChannelCollectionCell: UICollectionViewCell {
     @IBOutlet var title: UILabel!
 
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
+    override func didUpdateFocus(in context: UIFocusUpdateContext,
+                                 with coordinator: UIFocusAnimationCoordinator) {
         if isFocused {
             layer.borderWidth = 2
             layer.borderColor = UIColor.blue.cgColor
@@ -41,7 +42,7 @@ extension ChannelsViewController {
 
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "channel",
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellsIDs.channel.rawValue,
                                                       for: indexPath)
         if let cell = cell as? ChannelCollectionCell {
             cell.title.text = channels[indexPath.row].title
@@ -50,20 +51,23 @@ extension ChannelsViewController {
         return cell
     }
 
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 didSelectItemAt indexPath: IndexPath) {
         selectedChannel = channels[indexPath.row]
-        performSegue(withIdentifier: "player", sender: self)
+        performSegue(withIdentifier: SeguesIDs.player.rawValue, sender: self)
     }
 }
 
 extension ChannelsViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let target = segue.destination as? AVPlayerViewController,
-            let channel = selectedChannel, let channelURL = channel.url {
+            let channel = selectedChannel,
+            let channelURL = channel.url {
 
             target.player = AVPlayer(url: channelURL)
             target.player?.play()
         } else {
+            print("error") //TODO:
         }
     }
 }

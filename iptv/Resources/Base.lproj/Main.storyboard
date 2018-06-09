@@ -22,24 +22,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICF-Lc-duB" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
-                                <rect key="frame" x="835" y="415" width="250" height="250"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="K2Q-dy-ycJ"/>
-                                    <constraint firstAttribute="height" constant="250" id="pNH-9Q-fWq"/>
-                                </constraints>
-                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="EeM-aA-KX3">
+                                <rect key="frame" x="928" y="508" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ICF-Lc-duB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CJy-K4-ClW"/>
-                            <constraint firstItem="ICF-Lc-duB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aA7-3J-wDF"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
                     </view>
                     <connections>
-                        <outlet property="activityView" destination="ICF-Lc-duB" id="Uia-IH-n3B"/>
+                        <outlet property="activityIndicator" destination="EeM-aA-KX3" id="epx-dU-MrQ"/>
                         <segue destination="JsI-dF-bjy" kind="presentation" identifier="channels" modalTransitionStyle="crossDissolve" id="ykf-4b-Csy"/>
                     </connections>
                 </viewController>
